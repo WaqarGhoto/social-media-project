@@ -1,0 +1,10 @@
+
+<!-- Add New Post  -->
+    <app-post [user]="user" (add)='addPost($event)' ></app-post>
+<!-- End Add New Post  -->
+
+<!-- list of Posts -->
+<div class="card mb-2" *ngFor="let post of posts, let index i">
+    <app-post-detail [post]="post" [user]="user" (deletePost)='removePost($event,i)'></app-post-detail>
+</div>
+<!-- end List of Posts -->

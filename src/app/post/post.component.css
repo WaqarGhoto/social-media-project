@@ -1,0 +1,43 @@
+.post{
+    background: white;
+    border-color: rgb(1, 161, 140);
+}
+
+.post-image{
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+}
+
+
+
+.btn-default {
+    font-family: Raleway-SemiBold;
+    font-size: 14px;
+    /* color: rgba(108, 88, 179, 0.75); */
+    color: black;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border-radius: 40px;
+    /* background: transparent; */
+    transition: all 0.3s ease 0s;
+    
+  }
+
+  input[type=text] {
+    box-sizing: border-box;
+    border:none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .img_wrp {
+    display: inline-block;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }

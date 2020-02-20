@@ -1,0 +1,43 @@
+[
+     {
+         "id":1,
+         "user_id":1,
+         "description":"This is my Frist Post",
+         "data_image":"assets/images/post1.jpg",
+         "comments_list":[1,2,3,4],
+         "likes":7
+     },
+     {
+        "id":2,
+        "user_id":1,
+        "description":"This is my Second Post",
+        "data_image":"assets/images/post2.jpg",
+        "comments_list":[1,3,3],
+        "likes":7
+    },
+    {
+        "id":3,
+        "user_id":1,
+        "description":"This is my Third Post",
+        "data_image":"assets/images/post3.jpg",
+        "comments_list":[2,4],
+        "likes":7
+    },
+    {
+        "id":4,
+        "user_id":1,
+        "description":"This is my Fourth Post",
+        "data_image":"assets/images/post5.jpg",
+        "comments_list":[1,4],
+        "likes":7
+    },
+    {
+        "id":5,
+        "user_id":1,
+        "description":"This is my Fifth Post",
+        "data_image":"assets/images/post5.jpg",
+        "comments_list":[],
+        "likes":7
+    }
+
+]

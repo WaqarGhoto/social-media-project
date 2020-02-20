@@ -1,0 +1,46 @@
+
+.fbnav{
+    background-color: #3b5998;
+    color: white;
+    
+}
+
+.text-white{
+    color: white;
+}
+
+.bg-color{
+    background:black;
+}
+
+  
+.post-profile-image{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;  
+} 
+
+.border-left{
+    
+    border-left: 4px solid red;
+}
+
+a {
+    text-decoration: none;
+}
+.fixed {
+    position: fixed;
+    width: -25%;
+    
+}
+
+.profile-image{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.user-profile-font{
+    font-family: 'Patua One', cursive;
+}

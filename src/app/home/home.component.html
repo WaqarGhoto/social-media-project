@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg text-light fbnav fixed-top">
+    <a class="navbar-brand text-light user-profile-font" href="#">Facebook</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+        <div class="ml-5">
+          <form class="form-inline my-2 my-lg-0 mr-5" style="width:400px;">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      <ul class="navbar-nav float-right ml-5">
+        <li class="nav-item active user-profile-font">
+          <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        
+        <li class="nav-item active mr-3 ml-3">
+            <a href="#" class="user-profile-font text-light"><img class="profile-image mr-1" src="{{user?.image}}" alt="Avatar" >{{user?.name}}</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light user-profile-font" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item active mr-3 ml-3 float-right">
+            
+        </li>
+        
+      </ul>
+      
+      
+    </div>
+    <a href="#" (click)="logout()" class="user-profile-font text-light float-right">Logout<i class="fas fa-lg ml-2 fa-sign-out-alt text-danger"></i></a>
+  </nav>
+  
+  <div class="container-fluid  py-5">
+    <div class="row">
+      <div class="col-sm-3 float-left">
+       <!-- ? <a  class="btn btn-primary" (click)="addFriend()">Add Friend Parent</a> -->
+         <div class="position-fixed ml-0">
+           <app-friends-suggestion [user]="user" [friends_suggestion]="friends_suggestion" (confirm)='addFriendP($event)' ></app-friends-suggestion>
+         </div>
+      </div>
+      <div class="col-sm-5 mt-4">
+          <!-- post list -->
+          <app-post-list ></app-post-list>
+          <!-- end post list -->
+      </div>
+      <div class="col-sm-2   mt-4 ">
+            
+      </div>
+  
+      <div class="col-sm-2  p-0 ">
+        <div class="position-fixed p-0 m-0 float-right ml-0 pl-0"> 
+          <!-- Friends -->
+           <app-friends-list [user]="user" [friends]="friends"></app-friends-list> 
+          <!-- End Friends -->
+          
+        </div>
+      </div>
+    </div>
+  </div>

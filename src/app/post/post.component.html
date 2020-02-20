@@ -1,0 +1,74 @@
+
+<div class="card mb-3 py-0 mt-4">
+  <div class="card-header py-0 p-0">
+    <h6 class="p-0">Create Post</h6>
+  </div>
+  <div class="card-body mt-0 py-2">
+       
+    <img src="{{user?.profile_pic}}" alt="" class="post-image mr-3">
+        
+        <!-- <input class="lg" type="text" name="" placeholder="What's on your mind" (keyup.enter)="addPost(inputdescription.value)"  data-toggle="modal" data-target="#exampleModal"  #inputdescription  style="border: none;"> -->
+        <input class="lg" type="text" name="" placeholder="What's on your mind"   data-toggle="modal" data-target="#exampleModal" style="border: none;"> 
+  </div>
+  <div class="card-footer py-1 bg-white border-0">
+     <div class="border-top">
+        <h5><a class="btn bg-light btn-default mt-2 mr-2" href="#" data-toggle="modal" data-target="#exampleModal"> <i class="fas fa-image fa-lg text-info mr-1"></i> Photos/Vedioes</a>
+          <a class="btn bg-light btn-default mt-2 mr-1" href="#" ><i class="fas fa-user-tag fa-lg text-primary mr-1"></i> Tag Friends </a>
+          <a class="btn bg-light btn-default mt-2 mr-1" href="#" ><i class="fas fa-laugh-beam fa-lg text-warning mr-1"></i>Feelings/Act.. </a>
+          <a class="btn btn-default bg-light   float-right mt-2 " href="#" > <i class="fas fa-ellipsis-h"></i></a></h5>
+     </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade " width="500px" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="p-0 modal-title">Create Post</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <img src="{{user?.profile_pic}}" alt="" class="post-image mr-3"> 
+           <input class="lg"  type="textarea" placeholder="What's on your mind" [(ngModel)]="inputvalue"  style="border: none;" >
+           
+            <div class="form-group">
+                <input type="file" name="image" (change)="fileProgress($event)" />
+            </div>
+            <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+            </div>
+            <div class="image-preview text-center" *ngIf="previewUrl">
+                <!-- <img [src]="previewUrl" height="200px" width="300px" class="imgResponsiveMax"  /> -->
+                <div ng-repeat="file in imagefinaldata" class="img_wrp text-white">
+                  <img height=200 width=250 [src]="previewUrl" class="imgResponsiveMax" alt="" />
+                  <a class="close" (click)="closeImage()" ><i class="fas fa-times-circle"></i></a>
+                </div>
+                                
+            </div>
+ 
+            <div class="mb-3" *ngIf="uploadedFilePath">
+                {{uploadedFilePath}}
+            </div>
+         
+      </div>
+      <div class="modal-footer">
+        <h6><a class="btn bg-light btn-default mt-2 mr-2" href="#" data-toggle="modal" data-target="#exampleModal"> <i class="fas fa-image fa-lg text-info mr-1"></i> Photos/Vedioes</a>
+          <a class="btn bg-light btn-default mt-2 mr-1" href="#" ><i class="fas fa-user-tag fa-lg text-primary mr-1"></i> Tag Friends </a>
+          <a class="btn bg-light btn-default mt-2 mr-1" href="#" ><i class="fas fa-laugh-beam fa-lg text-warning mr-1"></i>Feelings/Act.. </a></h6>
+          
+      </div>
+      <div>
+        <a class="btn btn-primary m-1" style="width: 98%;" (click)="addPost()"  data-dismiss="modal"> Post</a>
+     </div>
+  
+    </div>
+  </div>
+</div>
+
+
+

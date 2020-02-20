@@ -1,0 +1,89 @@
+<div class="row" *ngFor="let comment of comments, let i = index;">
+  <div class="col-1">
+    <img class="comment-image mr-1" src="{{comment.user.image}}" alt="Avatar" >
+  </div>
+  <div class="col-sm-11 ">
+    
+    <div class=" mb-0 pl-2 dropdown" >
+     <a  class="ml-2 text-primary comment"><span class="user-font">{{comment.user.name}} </span><span class="text-dark mb-0 mt-0">{{comment.text}}</span></a> 
+     <a class="mt-0 "   data-toggle="dropdown" ><i class="fas fa-ellipsis-h"></i>
+    </a>
+    <div class="dropdown-menu border">
+      <a class="dropdown-item " (click)="editComment(comment)" ><i class="fas fa-pencil-alt mr-3 text-warning"></i>Edit</a>
+      <a class="dropdown-item" (click)="removeComment(i,comment.id)" ><i class="fas fa-trash-alt mr-3 text-danger"></i>Delete</a>
+
+    </div>
+    </div>
+    
+    <div>
+      <a href="#" class="ml-3">Like</a>
+      <a href="#" class="ml-2">Reply</a>
+    
+    </div>
+
+     <!-- list of Replied Comments  -->
+        <!-- <div class="row mt-2">
+          <div class="col-1">
+            <img class="comment-reply-image " src="assets/images/user16.jpg" alt="Avatar" >
+          </div>
+          <div class="col-11">
+            <div class=" mb-0">
+              <a href="#" class="comment"><span class="">Asghar </span><span class="text-dark mb-0 mt-0">This is my Reply This is  </span></a> 
+              <a href="#" class=" mt-0"><i class="fas fa-ellipsis-h"></i></a>
+             </div>
+             <div>
+                <a href="#" class="ml-3">Like</a>
+                <a href="#" class="ml-2">Reply</a>
+                
+            </div>
+
+          </div>
+        </div> -->
+
+      <!-- end list replied of comments  -->
+
+      <!-- list of Replied Comments  -->
+      <!-- <div class="row mt-2">
+          <div class="col-1">
+            <img class="comment-reply-image " src="assets/images/user7.jpg" alt="Avatar" >
+          </div>
+          <div class="col-11">
+            <div class=" mb-0">
+              <a href="#" class="comment"><span class="">Asghar </span><span class="text-dark mb-0 mt-0">This is my Reply This is  </span></a> 
+              <a href="#" class=" mt-0"><i class="fas fa-ellipsis-h"></i></a>
+             </div>
+             <div>
+                <a href="#" class="ml-3">Like</a>
+                <a href="#" class="ml-2">Reply</a>
+                
+            </div>
+
+          </div>
+        </div> -->
+
+      <!-- end list replied of comments  -->
+  </div>
+
+</div>
+<!-- end comments  -->
+
+
+  <!-- Add Comment  -->
+<div class="row mt-2">
+    <div class="col-1">
+      <img class="comment-image " src="{{user.image}}" alt="Avatar" >
+    </div>
+    <div class="col-11 mt-1">
+      <input  type="text" (keyup.enter)="addComment(myInput.value)" #myInput  [(ngModel)]="inputvalue" class="border-bottom p-1" placeholder="Write comment here!"  style="width: 100%;border-radius: 20px;">
+    </div>
+    <!-- <div class = "container mt-5">
+      <p>
+         <a href = "#" data-toggle = "tooltip" title = "Tooltip on link">
+            Tutorialspoint...
+         </a>
+      
+      </p>
+   </div> -->
+</div>
+  <!-- end Add comment  -->
+

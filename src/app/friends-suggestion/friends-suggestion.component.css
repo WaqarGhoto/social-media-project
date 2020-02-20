@@ -1,0 +1,74 @@
+
+
+.image-link{
+    margin-bottom: 5px;
+    width: 45px;
+    height: 45px;  
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Bitter', serif;
+}
+.btn-default {
+    font-family: Raleway-SemiBold;
+    font-size: 14px;
+    color:black; 
+    letter-spacing: 1px;
+    line-height: 15px;
+    border-radius: 40px;
+    background:white;
+    transition: all 0.3s ease 0s;
+
+    
+  }
+
+  .btn-default:hover{
+      background: #0275d8;
+      color: #f7f7f7;
+  }
+
+  .btn-cricle {
+    font-family: Raleway-SemiBold;
+    font-size: 14px;
+    color:black; 
+    letter-spacing: 1px;
+    line-height: 15px;
+    border-radius: 50;
+    background:white;
+    transition: all 0.3s ease 0s;
+    
+  }
+
+  .btn-circle:hover{
+      background: #0275d8;
+      color: #10f582;
+  }
+  .status{
+    border-radius: 50%;
+    width: 15px;
+  }
+
+  .box-bottom-border{
+      border-bottom: 1px solid rgba(108, 88, 179, 0.75); ;
+  }
+
+  .vertical-menu {
+    width: 100%;
+    height: 480px;
+    
+  }
+
+  .vertical-menu:hover{
+    overflow-y: auto;
+  }
+  
+
+  .btn-plus{
+    color: #02FF15 ;
+    font-size: 20px;
+  }
+
+
+

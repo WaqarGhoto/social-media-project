@@ -1,0 +1,39 @@
+
+.fbnav{
+    background-color: #3b5998;
+    color: white;
+    
+}
+
+.text-white{
+    color: white;
+}
+
+.bg-color{
+    background:black;
+}
+
+
+.image-link{
+    margin-bottom: 5px;
+    width: 35px;
+    height: 35px;  
+}  
+
+.post-profile-image{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;  
+} 
+
+.border-left{
+    
+    border-left: 4px solid red;
+}
+
+
+.fixed {
+    position: fixed;
+    width: -25%;
+    
+}

@@ -1,0 +1,55 @@
+.coment-font{
+    font-family: 'Cambay', sans-serif;
+    color: black;
+}
+
+
+.react-comments{
+    font-family: 'Cambay', sans-serif;
+}
+
+
+.font-comments{
+    font-family: 'Patua One', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+.comment{
+    background:#e5e5e5; 
+    border-radius: 20px;
+    padding: 5px; 
+    margin: 3px;
+    line-height: normal;
+    display:inline-block;
+
+}
+
+.comment-image{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.comment-reply-image{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    
+}
+
+.comment-edit-btn{ 
+    border-radius: 45px;
+    padding: 1px; 
+    padding-left: 3px;
+    margin: 3px;
+}
+
+input[type=text] {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }

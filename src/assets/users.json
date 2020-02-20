@@ -1,0 +1,77 @@
+[
+    { "id":1,
+      "name":"Waqar Ahmad",
+      "profile_pic":"assets/images/user1.jpg",
+      "friend_list":[2,3,4],
+      "friend_suggestion_list":[7,8,9],
+      "posts_list":[1,2,3,4]
+    },
+    { "id":2,
+        "name":"Rubeel Ahmad",
+        "profile_pic":"assets/images/user2.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":3,
+        "name":"Faiq Rizwan",
+        "profile_pic":"assets/images/user3.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":4,
+        "name":"Mehtab Shaikh",
+        "profile_pic":"assets/images/user16.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":5,
+        "name":"Mohammad Hamza",
+        "profile_pic":"assets/images/user4.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":6,
+        "name":"Zain Zaheer",
+        "profile_pic":"assets/images/user5.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":7,
+        "name":"Skindar Ali",
+        "profile_pic":"assets/images/user6.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":8,
+        "name":"Zahoor Ahmad",
+        "profile_pic":"assets/images/user7.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":9,
+        "name":"Izhar Kalwar",
+        "profile_pic":"assets/images/user8.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      },
+      { "id":10,
+        "name":"Nisar Ahmad",
+        "profile_pic":"assets/images/user9.jpg",
+        "friend_list":[],
+        "friend_suggestion_list":[],
+        "posts_list":[]
+      }
+
+
+
+
+
+]

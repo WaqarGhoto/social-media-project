@@ -1,0 +1,54 @@
+<div class="card-header border-0 mb-0 bg-white dropleft">
+    <a  class="user-font text-primary " ><img class="image-link mr-1" src="{{post.user.image}}" alt="Avatar" >{{post.user.name}}</a> 
+    <a class="mt-0 float-right "   data-toggle="dropdown" ><i class="fas fa-ellipsis-h"></i>
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" ><i class="fas fa-pencil-alt mr-3 text-warning"></i>Edit</a>
+      <a class="dropdown-item" (click)="removePost()" ><i class="fas fa-trash-alt mr-3 text-danger"></i> Delete</a>
+
+    </div>
+    <h5 >{{post.description}}</h5>       
+  </div>
+  
+  <div class="card-body mt-0 py-0" >
+    <img class="card-img-top posted-image" ng-if="post.image" src="{{post.image}}" alt="">
+  </div>
+  <div class="card-body border-0 mt-2 mb-0 py-0">
+     
+
+  </div>
+  <div class="card-footer bg-white mt-0 border-top-0 py-0">
+    <div class="row  border-bottom mb-0 py-0 ml-2 mr-2">
+      <div class="col-sm-8">
+       <a   class="react-comments btn text-secondary"> {{post.likes}} reacts</a>
+      </div>
+      <div class="col-sm-4">
+       <a  class="react-comments btn text-secondary float-right" data-toggle="collapse" data-target="#demo">{{post.commentsCount}} comments</a>
+              
+      </div>
+
+    </div>
+    <div class="row mt-0 ">
+      <div class="col-sm-4 text-center">
+        <a class="text-secondary btn font-comments" (click)="addLike()" style="text-decoration: none;" ><i class="far fa-thumbs-up fa-lg mr-2"></i>likes</a>
+      </div>
+      <div class="col-sm-4 text-center">
+        <a class="text-secondary btn font-comments" ><i class="far fa-comment fa-lg mr-2"></i>Comments</a>
+      </div>
+      <div class="col-sm-4 text-center">
+        <a class="text-secondary btn font-comments" ><i class="far fa-share fa-lg mr-2"></i>Share</a>
+      </div>
+    </div>
+    
+  </div>
+  <div class="card-footer bg-white">
+    <!-- comments -->
+
+    <!-- <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button> -->
+    <div id="demo" class="collapse">
+      <app-comment [user]="user" [post]="post" (add)='addComment($event)' ></app-comment>
+    </div>
+
+        
+    <!-- end comments  -->
+  </div>

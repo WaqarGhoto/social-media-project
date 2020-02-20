@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-3 col-sm-1">
+
+        </div>
+        <div class="col-lg-6 mt-3 col-sm-10">
+            <div class="card">
+                
+                <div class="card-body ">
+                    <!-- <h5> Facebook Login</h5>
+                    <div class="form">
+                        <label for="username">User Name / Id</label>
+                        <input type="text" name="" id="username" placeholder="Username"><br>
+                        <label for="password">Password :</label>
+                        <input type="password" name="" id="password" placeholder="Username">
+                    </div>
+
+                    <a  class="btn btn-primary"> Login</a> -->
+
+                    <h2>Facebook Demo</h2>
+                    
+                    <form action="" method="post">
+                    
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" [(ngModel)]="username" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" required>
+                        <!-- routerLink="/home/1" -->
+                        <a style="width: 100%;" (click)="login()" class="btn btn-primary btn-lg mt-1"  >Login</a>
+                        <label>
+                        <input type="checkbox"  checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-1">
+
+        </div>
+    </div>
+</div>
+
+
+
+    
+        <ul class="">
+            <div *ngFor="let post of posts">
+            
+            <h1> this  {{post.id}}</h1>
+
+            
+        </div>
+         </ul>
+        
+                    <ul class="">
+                         <div *ngFor="let user of users">
+                            
+                            <div class="row" >
+                                <div class="col-3">
+                                    <a href="#"><img class="image-link mr-1" src="{{user.image}}" alt="Avatar" >{{user.name}}</a>
+                                </div>
+                                <div class="col-9 mt-1 ml-0">
+                                    <a href="#" routerLink="/home/{{user.id}}" class=" btn btn-primary btn-sm ">Login</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                   </ul>
+
+                
