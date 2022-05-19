@@ -12,14 +12,13 @@ export class UsersListComponent implements OnInit {
 
   public users:User[];
   public posts:Post[];
-  public username:string;
-  public password:string;
+  public username:string="waqarahmad0727@gmail.com";
+  public password:string="ghoto1234";
   public logintext:string;
   constructor(private postService:PostService, private userService:UserService,private router: Router) { }
 
   ngOnInit() {
-    
-    //this.getUsers();
+    this.getUsers();
     //this.getPosts();
     
   }
@@ -29,10 +28,10 @@ export class UsersListComponent implements OnInit {
     .subscribe(posts=> this.posts = posts);
   }
   getUsers(): void {
-    this.userService.getAllUsers()
-    .subscribe(users => {
-      this.users = users;
-    });
+    this.users=this.userService.getAllUsers();
+    // .subscribe(users => {
+    //   this.users = users;
+    // });
     
   }
 

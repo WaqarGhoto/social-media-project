@@ -99,13 +99,11 @@ export class HomeComponent implements OnInit {
 
 
   getFriends() {
-      this.userService.getAllUsers().subscribe(users=>{
-         this.myUserArray=users
-         for(var fid of this.user.friend_list)
-         {
-           this.friends.push(users[fid]);
-         }   
-       });    
+    this.myUserArray=this.userService.getAllUsers(); 
+       for(var fid of this.user.friend_list)
+       {
+         this.friends.push(this.myUserArray[fid]);
+       }    
   }
  
   // getFriendsSuggestions() {

@@ -18,6 +18,7 @@ export class UserAuth{
 
 
 export class User{
+  
   id:string;
   name:string;
   image:string;
@@ -46,11 +47,41 @@ export class UserService {
   user:User;
   id:string;
 
+  usersList:any[]=[
+    {
+      id:'1',
+      name:'waqar',
+      image:'image',
+      friend_list:[],
+      friend_suggestion_list:[],
+      posts_list:[]
+    },
+    {
+      id:'2',
+      name:'zain',
+      image:'image',
+      friend_list:[],
+      friend_suggestion_list:[],
+      posts_list:[]
+    },
+    {
+      id:'3',
+      name:'ghaffar',
+      image:'image',
+      friend_list:[],
+      friend_suggestion_list:[],
+      posts_list:[]
+    }
+
+  ]
+
   constructor(private http :HttpClient) { }
 
-  getAllUsers(): Observable<User[]> {
-    return this.http.get<User[]>('https://localhost:44316/facebookusers');
+  getAllUsers(): User[] {
+    return this.usersList;
+    //return this.http.get<User[]>('https://localhost:44316/facebookusers');
   }
+
   
   getFriends(id:string): Observable<User[]> {
     return this.http.get<User[]>('https://localhost:44316/friends/'+id);
@@ -66,22 +97,23 @@ export class UserService {
     tempmodel.username=username;
     tempmodel.password=password;
     console.log(tempmodel);
-    return  this.http.post<any>('https://localhost:44316/facebook/authenticate',tempmodel)
-    .subscribe(user => {
+    localStorage.setItem('currentUser', JSON.stringify({username:username,password:password}));
+  //   return  this.http.post<any>('https://localhost:44316/facebook/authenticate',tempmodel)
+  //   .subscribe(user => {
       
-      //console.log(user);
-      console.log(user.id);
-            if (user) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', JSON.stringify(user));
-            }
+  //     //console.log(user);
+  //     console.log(user.id);
+  //           if (user) {
+  //               // store user details and jwt token in local storage to keep user logged in between page refreshes
+  //               localStorage.setItem('currentUser', JSON.stringify(user));
+  //           }
            
-            //console.log(user);
-           // this.user=user;
-            console.log(user);
-            return user;
+  //           //console.log(user);
+  //          // this.user=user;
+  //           console.log(user);
+  //           return user;
 
-   });
+  //  });
   }
 
 
