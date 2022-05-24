@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-3 col-sm-1">
+
+        </div>
+        <div class="col-lg-6 mt-3 col-sm-10">
+            <div class="card">
+                
+                <div class="card-body ">
+                
+                    <h2>Facebook Demo</h2>
+                    
+                    <form action="" method="post">
+                    
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" [(ngModel)]="username" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" required>
+                        <!-- routerLink="/home/1" -->
+                        <a style="width: 100%;" (click)="login()" class="btn btn-primary btn-lg mt-1"  >Login</a>
+                        <label>
+                        <input type="checkbox"  checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-1">
+
+        </div>
+    </div>
+</div>
