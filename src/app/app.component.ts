@@ -1,6 +1,8 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { map, filter, take } from "rxjs/operators";
-import { interval, pipe } from "rxjs";
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+import { AuthService } from './auth/auth.service';
 
 
 @Component({
@@ -11,5 +13,21 @@ import { interval, pipe } from "rxjs";
 })
 export class AppComponent {
   title = 'facebookDemo';
+  isAuthenticated:boolean=false;
+  routeChangeSubs:Subscription;
+  user : any ;
+
+  constructor(private router : Router ,private authService:AuthService){
+     this.routeChangeSubs = this.router.events.pipe(filter(event=>event instanceof NavigationEnd)).subscribe(val=>{
+       if(val instanceof NavigationEnd){
+          this.checkUserAuthentication();
+       }
+     })
+  }
+
+  checkUserAuthentication():void{
+    this.isAuthenticated=this.authService.isAuthenticated();
+  }
+
 
 }

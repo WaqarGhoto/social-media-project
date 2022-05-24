@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<div class="app-component" *ngIf="isAuthenticated ; else routerOutlet">
+     <!-- --- here will be the code of Header ---  -->
+     
+     <div class="main-layout">
+         <!-- if main layout has and additional thing that won't change  -->
+         <div class="main-content">
+            <app-header></app-header>
+            <router-outlet></router-outlet>
+         </div>
+     </div>
+</div>
+
+
+<ng-template #routerOutlet>
+    <div class="app-component">
+        <div class="main-layout">
+            <div class="main-content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</ng-template>
