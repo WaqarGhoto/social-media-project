@@ -1,5 +1,5 @@
 <div class="card-header border-0 mb-0 bg-white dropleft">
-    <a  class="user-font text-primary " ><img class="image-link mr-1" src="{{post.user.image}}" alt="Avatar" >{{post.user.name}}</a> 
+    <a  class="user-font text-primary " ><img class="image-link mr-1" src="{{user.image}}" alt="Avatar" >{{user.name}}</a> 
     <a class="mt-0 float-right "   data-toggle="dropdown" ><i class="fas fa-ellipsis-h"></i>
     </a>
     <div class="dropdown-menu">
@@ -11,7 +11,7 @@
   </div>
   
   <div class="card-body mt-0 py-0" >
-    <img class="card-img-top posted-image" ng-if="post.image" src="{{post.image}}" alt="">
+    <img class="card-img-top posted-image" src="{{post.image}}" alt="">
   </div>
   <div class="card-body border-0 mt-2 mb-0 py-0">
      

@@ -3,23 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './user.service';
 
-export class Post{
-  id:number;
-  user:User;
+export type Post ={
+  id:string;
+  userId:string;
   description:string;
   image:string;
   likes:number;
   commmentsCount:number;
-
-  public Post(id:number,user:User,description:string,data_image:string)
-  {
-      this.id=id;
-      this.user=user;
-      this.description=description;
-      this.image=data_image;
-      this.likes=0;
-      this.commmentsCount=0;
-  }
 }
 
 @Injectable({
@@ -28,6 +18,26 @@ export class Post{
 
 export class PostService {
 
+  postsList : any[] =[
+    {
+      id:'1',
+      userId:'1',
+      description:'First Post',
+      image:'assets/images/user16.jpg'
+    },
+    {
+      id:'2',
+      userId:'1',
+      description:'Second Post',
+      image:'assets/images/post1.jpg'
+    },
+    {
+      id:'3',
+      userId:'1',
+      description:'Third Post',
+      image:'assets/images/post2.jpg'
+    }
+  ];
 
   constructor(private http :HttpClient) { }
 
@@ -35,8 +45,9 @@ export class PostService {
   //   return this.http.get<Post[]>('assets/posts.json');
   // }
 
-  getAllPosts(): Observable<any> {
-       return this.http.get<any>('https://localhost:44316/posts');
+  getAllPosts(): any[] {
+       //return this.http.get<any>('https://localhost:44316/posts');
+       return this.postsList;
    }
 
   addPost(post:Post):Observable<any>{

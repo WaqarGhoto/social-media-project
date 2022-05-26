@@ -33,10 +33,7 @@ export class PostListComponent implements OnInit {
   }
  
   getPosts():void {
-    this.postService.getAllPosts()
-    .subscribe(posts=> {
-      this.posts=posts;
-    });   
+    this.posts=this.postService.getAllPosts();   
   }
 
  removePost(id:number,i:number)

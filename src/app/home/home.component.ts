@@ -11,7 +11,6 @@ import {  Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  // user:User;
    user:User;
    myUserArray:User[]
    friends:User[]=[];
@@ -36,15 +35,10 @@ export class HomeComponent implements OnInit {
     //this.getUser();
     //this.getmyPosts();
     //this.getPosts();
+    this.posts=this.postService.getAllPosts();
     this.getUserFriendSuggestions();
-    this.getPosts();
     this.getUserFriends();
     
-  }
-
-  getPosts():void {
-    this.postService.getAllPosts()
-    .subscribe(posts=> this.posts = posts);
   }
 
   // getUser() {

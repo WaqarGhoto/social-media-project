@@ -29,8 +29,7 @@ constructor(private http: HttpClient, private postService:PostService) { }
 
   addPost(){
  
-    this.post=new  Post();
-    this.post.user=this.user;
+    this.post.userId=this.user.id;
     this.post.description=this.inputvalue;
     this.post.image=this.previewUrl;
     this.post.likes=0;
