@@ -1,0 +1,74 @@
+{
+    "data":[
+        {
+          "id":"369bb6e9-ccdc-4321-ab63-9b36b8a768e9",
+          "name":"waqar ahmad",
+          "email" :"waqarahmad0727@gmail.com",
+          "password":"admin1234",
+          "image":"assets/images/user1.jpg"
+        },
+        {
+            "id":"6305f0a4-1bc1-4389-82e3-e3cdeef9509f",
+            "name":"rubeel ahmad",
+            "email" :"rubeelkhan@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user2.jpg"
+        },
+        {
+            "id":"1e630c02-2fb2-4213-8663-c748948f9e95",
+            "name":"nisar ahmad",
+            "email" :"nisarahmad@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user3.jpg"
+        },
+        {
+          "id":"57a1bfe6-7a3f-4461-88b4-6586cb2662df",
+          "name":"waleed ahmad",
+          "email" :"waleedahmad@gmail.com",
+          "password":"admin1234",
+          "image":"assets/images/user4.jpg"
+        },
+        {
+            "id":"e8c2a1aa-9746-44f1-8e7e-ca8d68411129",
+            "name":"zain manzoor",
+            "email" :"zainmanzoor@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user5.jpg"
+        },
+        {
+            "id":"7088f439-7e8e-405a-8da6-9d0fdca9540c",
+            "name":"gaffar ahmad",
+            "email" :"gaffarahmad0727@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user6.jpg"
+        },
+        {
+            "id":"e047a396-246d-486f-805a-873dc899f205",
+            "name":"mehtab shaikh",
+            "email" :"mehtabshaikh@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user7.jpg"
+        },
+        {
+            "id":"c9bc66f7-ae78-4912-aa1a-7236096efb03",
+            "name":"asghar ali",
+            "email" :"asgharali@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user8.jpg"
+        },
+        {
+            "id":"32b0fa58-225b-4ca7-8d38-cc4b6590dde7",
+            "name":"aslam bhai",
+            "email" :"aslambhai@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user9.jpg"
+        },
+        {
+            "id":"fae99ca9-e700-4f1f-bae1-9fb33056a2dd",
+            "name":"waqas ahmad",
+            "email" :"waqasahmad@gmail.com",
+            "password":"admin1234",
+            "image":"assets/images/user10.jpg"
+        }
+    ]
+}

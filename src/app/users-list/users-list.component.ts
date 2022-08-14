@@ -24,15 +24,11 @@ export class UsersListComponent implements OnInit {
   }
   
   getPosts():void {
-    this.postService.getAllPosts()
-    .subscribe(posts=> this.posts = posts);
+    this.posts=this.postService.getAllPosts();
   }
+
   getUsers(): void {
     this.users=this.userService.getAllUsers();
-    // .subscribe(users => {
-    //   this.users = users;
-    // });
-    
   }
 
   login()
